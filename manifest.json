@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Message Passing Extension 2",
+    "version": "0.0.0.1",
+    "description": "メッセージパッシングの動きを確認します。また、テンプレートとしても使えるように",
+    "icons": {
+        "48": "icon2.png"
+    },
+    "applications": {
+        "gecko": {
+            "id": "fugafugafugafugafuga@fugafuga",
+            "strict_min_version": "42.0"
+        }
+    },
+    "browser_action": {
+        "default_icon": {
+            "48": "icon2.png"
+        }
+    },
+    "background": {
+        "scripts": [
+            "this_is_background_script.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "this_is_content_script.js"
+            ],
+            "all_frames": true,
+            "run_at": "document_end"
+        }
+    ]
+}
