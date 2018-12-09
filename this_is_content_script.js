@@ -6,5 +6,5 @@ function window_Clicked() {
 
 //バックグラウンド側からのメッセージを受け取ったとき。
 browser.runtime.onMessage.addListener(function (msg) {
-    console.log("Message from 1");
+    console.log("Extension2 content:Message from background");
 });
